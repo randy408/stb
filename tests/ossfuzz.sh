@@ -15,11 +15,6 @@ find $SRC/stb/tests/pngsuite -name "*.png" | \
 
 cp $SRC/stb/tests/stb_png.dict $OUT/stb_png_read_fuzzer.dict
 
-ls $WORK
-
-tar xvzf $WORK/jpg.tar.gz --directory $SRC/stb/tests
-tar xvzf $WORK/gif.tar.gz --directory $SRC/stb/tests
-
 find $SRC/stb/tests $WORK -name "*.png" -o -name "*.jpg" -o -name ".gif" | \
      xargs zip $OUT/stbi_read_fuzzer_seed_corpus.zip
 
